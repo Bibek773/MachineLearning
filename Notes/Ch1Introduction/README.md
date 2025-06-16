@@ -1,58 +1,136 @@
 # Introduction
-Machine learning (ML) is a branch of artificial intelligence (AI) focused on enabling computers and machines to imitate the way that humans learn, to perform tasks autonomously, and to improve their performance and accuracy through experience and exposure to more data.
-## Relationship between AI, Machine Learning and Deep Learning
-### AI
-- Any technique that enables computers to mimic human intelligence, using logic, if-then rule, decision tree, and machine learning(including deep learning).
-### Machine Learning
-- A subset of AI that includes abstruse statistical techniques that enable machine to improve at tasks with experience. The category includes deep learning.
-### Deep Learning
-- The subset of machine learning composed of algorithms that permit software to train itself to perform tasks, like speech and image recoginition, by exposing multilayered neural network to vast amounts of data.
+**Machine Learning (ML)** is a subfield of **Artificial Intelligence (AI)** that focuses on building systems that can learn from and make decisions based on data—without being explicitly programmed. It enables machines to perform tasks autonomously and improve their performance over time as they are exposed to more data.
 
-![alt text](tx32puqCzYlG832gHMhinF3VkJU.avif)
-**Figure:Relation between AI, ML and DeepLearning**
+## Relationship Between AI, Machine Learning, and Deep Learning
+
+### AI (Artificial Intelligence)
+- AI refers to any technique that enables machines to **mimic human intelligence**.
+- This includes rule-based systems like **if-then logic**, **decision trees**, and **learning algorithms** like **machine learning** and **deep learning**.
+
+### Machine Learning
+- ML is a **subset of AI** that uses **statistical methods** to enable machines to **learn patterns** from data and improve their performance with experience.
+- It includes both **traditional algorithms** (like linear regression, decision trees) and **deep learning**.
+
+### Deep Learning
+- Deep Learning is a **subset of ML** based on **artificial neural networks with multiple layers** (deep neural networks).
+- It excels at tasks such as **image recognition**, **speech recognition**, **natural language understanding**, and more.
+- Unlike traditional ML, deep learning models can automatically extract features from raw data with **minimal human intervention**.
+
+![alt text](tx32puqCzYlG832gHMhinF3VkJU.avif)  
+**Figure: Relationship between AI, ML, and Deep Learning**
 
 ---
-Machine Learning is a technique to implement AI that can learn from the data by themselves without being explicitly programmed.
 
-**Types of Machine Learning**
-ML systems falls into one or more of the following categories based on how they learn to make predictions or generate content:
-- Supervised Learning
-- Unsupervised Learning
-- Reinforcement Learning
-- Generative AI
+## What is Machine Learning?
+Machine Learning is a way to build AI systems that **learn from data**, rather than following hardcoded rules. ML systems **generalize** from past experience (data) to make **future predictions** or decisions.
 
-## Supervised Learning
-This models can make prediction afterseeing lots of data with the correct answering and then discovering the connection between the elements in the data that produce the both questions and answers. These ML systems are "supervised" in the sense that a human gives the ML system data with the known correct results.
-**Two most common use case for supervised learning are:**
-- Regression 
-- Classification
+---
+
+## Types of Machine Learning
+
+Machine Learning can be broadly classified into the following categories:
+
+1. **Supervised Learning**  
+2. **Unsupervised Learning**  
+3. **Reinforcement Learning**  
+4. **Self-Supervised Learning** *(Emerging technique used in large language models like GPT)*  
+5. **Generative AI** *(Special focus on content generation using models like GANs or Transformers)*
+
+---
+
+## 1. Supervised Learning
+
+In supervised learning, the model learns from a **labeled dataset**, where the input data is paired with the correct output. The goal is to learn a mapping from inputs to outputs.
+
+**Applications:**
+- Spam email detection
+- Weather forecasting
+- Price prediction
+- Medical diagnosis
+
+### Use Cases
+- **Regression**
+- **Classification**
+
+---
 
 ### Regression
-A regression model predicts a numeric value. For example, a weather model that predicts the amount of rain, in inches or millimeters, is a regression model.
 
-See the table below for more examples of regression models:
+A regression model predicts **continuous numeric values**.
 
-| **Scenario**         | **Possible Input Data**                                                                                                                                      | **Numeric Prediction**                        |
-|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| Future house price   | Square footage, zip code, number of bedrooms and bathrooms, lot size, mortgage interest rate, property tax rate, construction costs, number of homes for sale | The price of the home                         |
-| Future ride time     | Historical traffic conditions (from smartphones, traffic sensors, ride-hailing apps), distance to destination, and weather conditions                        | Time in minutes and seconds to destination    |
+| **Scenario**         | **Possible Input Data**                                                                                                                                      | **Prediction (Output)**                       |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
+| House price prediction | Square footage, zip code, number of rooms, interest rate, market trends                                                                 | Future house price (in currency)               |
+| Traffic estimation     | GPS location, time of day, weather, historic data                                                                                   | Estimated travel time (minutes/seconds)       |
+
+---
 
 ### Classification
-Classification models predict the likelihood that something belongs to a category.  
-Unlike regression models, whose output is a number, classification models output a value that states whether or not something belongs to a particular category.
 
-For example, classification models are used to:
-- Predict if an email is spam
-- Detect if a photo contains a cat
+Classification models predict which **category or class** an input belongs to.
 
-#### Types of Classification Models
+#### Examples:
+- Is this email **spam** or **not spam**?
+- Does this image contain a **cat**, **dog**, or **neither**?
 
-Classification models are divided into two groups:
+#### Types of Classification:
 
 ##### 1. Binary Classification
-- Outputs a value from a class that contains **only two values**
-- Example: A model that predicts **rain** or **no rain**
+- Only **two** classes.
+- Example: Fraud detection (fraud or not fraud)
 
 ##### 2. Multiclass Classification
-- Outputs a value from a class that contains **more than two values**
-- Example: A model that predicts **rain**, **hail**, **snow**, or **sleet**
+- **More than two** possible categories.
+- Example: Handwritten digit recognition (0–9)
+
+---
+
+## 2. Unsupervised Learning
+
+In unsupervised learning, the model works with **unlabeled data** and tries to find **hidden patterns or structures**.
+
+### Examples:
+- **Clustering**: Grouping similar items (e.g., customer segmentation)
+- **Dimensionality Reduction**: Simplifying data (e.g., PCA)
+
+---
+
+## 3. Reinforcement Learning
+
+In reinforcement learning (RL), an agent learns to make decisions by interacting with an environment and receiving **rewards** or **penalties**.
+
+### Key Concepts:
+- **Agent**: The learner
+- **Environment**: Where the agent operates
+- **Reward**: Feedback signal for actions taken
+
+### Example Applications:
+- Game AI (like AlphaGo)
+- Robotics
+- Self-driving cars
+
+---
+
+## 4. Self-Supervised Learning (SSL)
+
+- A bridge between supervised and unsupervised learning.
+- The model **generates labels from the input data itself**.
+- Used heavily in **natural language processing** (e.g., BERT, GPT) and **vision models**.
+
+---
+
+## 5. Generative AI
+
+Generative AI focuses on systems that **create new content** such as images, text, audio, or video.
+
+### Examples:
+- **Text generation**: ChatGPT, Bard
+- **Image generation**: DALL·E, Midjourney
+- **Music generation**: AIVA, Amper Music
+
+### Common Technologies:
+- **GANs (Generative Adversarial Networks)**
+- **VAEs (Variational Autoencoders)**
+- **Transformers**
+
+---
